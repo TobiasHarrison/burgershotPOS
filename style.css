@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* general stylings */
+:root{
+    --yellow:#ffcd00;
+    --red:#D13440;
+    --white:#F1FAEE;
+    --babyblue:#A8DADC;
+    --bbhover:#E5F6DF;
+    --darkblue:#1D3557;
+    --dbhover:#2E548A;
+    --text:#2F2504;
+    --background:#457B9D;
+    color:var(--text);
+}
+*,*::before,*::after{
+    box-sizing:border-box;
+}
+.container{
+    text-align:center;
+    width:100vw;
+    height:100vh;
+}
+#tablet img{
+    top:0px;
+    position:relative;
+    margin-bottom:auto;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+/* login information */
+.login-container{
+    font-family:'Poppins', sans-serif;
+    color:var(--text);
+    background-color:var(--white);
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    align-content:center;
+    border-radius:20px;
+    padding:20px;
+    margin-left:550px;
+    top:300px;
+}
+.login-container input{
+    font-family:'Poppins',sans-serif;
+}
+#errorMessage{
+    font-size:0.8rem;
+    color:red;
+    display:none;
+}
+.submit{
+    font-family:'Poppins',sans-serif;
+    color:var(--white);
+    background-color:var(--red);
+    margin-top:10px;
+    padding:5px 10px 5px 10px;
+    border:none;
+    border-radius:2px
+}
+.submit:hover{
+    background-color:maroon;
+}
+/* log out stylings */
+.logout-container{
+    display:none;
+    width:80px;
+    top:20px;
+    right:10px;
+    position:absolute;
+}
+#logoutBtn{
+    font-family:'Poppins',sans-serif;
+    color:var(--white);
+    background-color:var(--red);
+    border:none;
+    border-radius:2px;
+    transition: all 0.3s ease;
+}
+#logoutBtn:hover{
+    transition: all 0.3s ease;
+    background-color:maroon;
+}
+
+/* general stylings */
+.background{
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    top:-894px;
+    display:block;
+    background-color:var(--background);
+    width:1282px;
+    height:802px;
+}
+
+.logo{
+    width:100%;
+    height:120px;
+    display:none;
+    flex-direction:row;
+    background-color:var(--white);
+
+}
+.logo img{
+    display:flex;
+    margin-top:-100px;
+    width:300px;
+}
+#BSLogo{
+    padding-top:110px;
+}
+#lostLogo{
+    padding-top:115px;
+    width:100px;
+}
+#AELogo{
+    padding-top:110px;
+}
+#VULogo{
+    padding-top:100px;
+}
+
+.content{
+    font-family:'Poppins',sans-serif;
+    display:none;
+    flex-direction:row;
+    margin-top:50px;
+}
+.block{
+    background-color:var(--white);
+    width:450px;
+    height:600px;
+    border-radius:20px;
+}
+.block:nth-child(2){
+    background-color:var(--white);
+    width:700px;
+}
+/* Receipt column styling */
+.info-header{
+    font-size:0.8rem;
+    display:flex;
+    margin-left:30px;
+    flex-direction:row;
+    justify-content:space-between;
+    width:380px;
+}
+.cashier{
+    display:flex;
+    flex-direction:row;
+    width:125px;
+}
+.cashier-info{
+    
+    display:flex;
+    flex-direction:row;
+    margin-top:-20px;
+    margin-left:10px;
+    margin-right:-20px;
+    align-items:center;
+    height:30px;
+}
+.dateInfo{
+    font-size:0.8rem;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin-top:-20px;
+    height:30px;
+}
+#date{
+    width:110px;
+}
+#time{
+    width:100px;
+}
+#receipt{
+    margin-left:60px;
+    margin-right:60px;
+    text-align:center;
+}
+#receipt-title{
+    padding:5px;
+}
+#receipt h5{
+    text-align:left;
+    margin-left:30px;
+}
+.receipt-list{
+    width:100%;
+}
+.receiptPrint{
+    font-weight:400;
+    display:flex;
+}
+.receipt-header{
+    font-weight:bold;
+    margin-bottom:10px;
+    display:flex;
+    flex-direction:row; 
+    list-style:none;
+}
+.receiptPrint{
+    margin-top:0px;
+    margin-bottom:0px;
+    display:flex;
+    flex-direction:row; 
+    list-style:none;
+}
+.receipt-header li, .receipt-print li{
+    margin-right:65px;
+}
+.receipt-header li:nth-child(2){
+    margin-left:40px;
+}
+.receipt-header li:nth-child(3){
+    margin-left:-20px;
+    width:100px;
+    display:flex;
+    flex-direction:row;
+}
+.receipt-item{
+    display:flex;
+    text-align:left;
+    width:7rem;
+}
+.item-cost{
+    padding:0px;
+    align-content:right;
+    margin:0px;
+    margin-left:10px;
+    width:50px;
+}
+.item-quantity{
+    font-family:'Poppins',sans-serif;
+    width:2rem;
+    background-color:var(--white);
+}
+/* dotted line */
+.dotted-line{
+    margin-top:10px;
+    position:absolute;
+    top:600px;
+    padding:1px;
+    width:450px;
+    border-top:dashed 1px var(--text);
+    box-sizing:border-box;
+}
+/* summary stylings */
+.summary{
+    text-align:left;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    position:absolute;
+    top:620px;
+    width:400px;
+    margin-left:30px;
+}
+.summary-price{
+    margin-right:3rem;
+}
+.discount-line{
+    text-align:left;
+    display:flex;
+    flex-direction:row;
+    top:640px;
+    width:400px;
+    margin-left:30px;
+    position:absolute;
+    justify-content:space-between;
+}
+.discount-price{
+    margin-right:3rem;
+}
+.grandtotal{
+    text-align:left;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    position:absolute;
+    top:660px;
+    width:400px;
+    margin-left:30px;
+}
+.grand-price{
+    margin-right:3rem;
+}
+/* add, minus, delete button stylings */
+
+.minus-Btn,.add-Btn, .trash-Btn{
+    color:var(--text);
+    border:none;
+    background-color:var(--white);
+    z-index:9;
+    transition: all 0.3s ease;
+}
+.minus-Btn:hover,.add-Btn:hover,.trash-Btn:hover{
+    color:var(--red);
+    transition: all 0.3s ease;
+}
+.minus-Btn {
+    margin-left:50px;
+}
+.add-Btn {
+    margin-right:50px;
+}
+.trash-Btn{
+    margin-left:20px;
+    text-align:right;
+}
+
+/* Menu column styling */
+.tab{
+    display:flex;
+    flex-direction:row;
+    margin-left:30px;
+}
+#menu{
+    margin-right:61px;
+}
+.screen{
+    background-color:var(--babyblue);
+    width:591px;
+    height:350px;
+    border-top-right-radius:20px;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#screenOne{
+    text-align:center;
+}
+.button{
+    font-family:'Poppins',sans-serif;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    font-weight:500;
+    background-color:var(--white);
+    margin-top:50px;
+    margin-left:10px;
+    margin-right:10px;
+    width:100px;
+    height:100px;
+    border-radius:20px;
+    vertical-align:middle;
+    align-content:center;
+    border:none;
+    z-index:9;
+    transition: all 0.3s ease;
+}
+.button:hover,.clear-cart:hover{
+    transition: all 0.3s ease;
+    background-color:var(--bbhover);
+}
+/* print line styling */
+.menuTab{
+    font-family:'Poppins',sans-serif;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    background-color:var(--darkblue);
+    align-items:center;
+    align-content:center;
+    color:var(--white);
+    font-weight:500;
+    width:100px;
+    padding:5px;
+    border:none;
+    transition: all 0.3s ease;
+}
+.menuTab:hover{
+    color:var(--white);
+    transition: all 0.3s ease;
+    background-color:var(--dbhover);
+}
+.active{
+    background-color:var(--babyblue);
+    color:var(--text);
+}
+.active:hover{
+    background-color:var(--babyblue);
+    color:var(--text);
+}
+
+#Burgers, #Drinks, #Sides {
+    display:none;
+    text-align:center;
+}
+/* bottom button stylings */
+.clear-cart{
+    font-family:'Poppins',sans-serif;
+    font-size:0.8rem;
+    font-weight:500;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background-color:var(--white);
+    padding:27px;
+    margin-top:-125px;
+    margin-left:500px;
+    width:100px;
+    height:100px;
+    border-radius:20px;
+    text-align:center;
+    vertical-align:middle;
+    border:none;
+    z-index:9;
+}
+.clear-cart-input{
+    color:white;
+    font-weight:300;
+    font-family:'Poppins',sans-serif;
+    text-align:center;
+    position:absolute;
+    align-items:center;
+    margin-left:575px;
+    margin-top:300px;
+    padding: 20px;
+    border-radius:20px;
+    background:rgba(0, 0, 0,0.5);
+    background-color:var(--red);
+    z-index:999999;
+}
+.discount-form{
+    color:white;
+    font-weight:300;
+    font-family:'Poppins',sans-serif;
+    text-align:center;
+    position:absolute;
+    align-items:center;
+    margin-left:575px;
+    margin-top:300px;
+    padding: 20px;
+    border-radius:20px;
+    background:rgba(0, 0, 0,0.5);
+    background-color:var(--red);
+    z-index:999999;
+}
+#discount-input{
+    font-family:'Poppins',sans-serif;
+    border:1px solid var(--text);
+    margin-bottom:10px;
+    border-radius:2px;
+}
+#discountMessage{
+    font-family:'Poppins',sans-serif;
+    font-size:0.8rem;
+    display:none;
+    color:var(--white);
+}
+.discount-buttons{
+    display:flex;
+    flex-direction:row;
+}
+#discountSubmit{
+    font-family:'Poppins',sans-serif;
+    margin-left:auto;
+    margin-right:auto;
+}
+.discount-form div{
+    padding:0px 0px 10px 0px;
+}
+.clear-cart-input div{
+    padding:0px 0px 10px 0px;
+}
+.discount{
+    font-family:'Poppins',sans-serif;
+    font-size:0.8rem;
+    font-weight:500;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background-color:var(--white);
+    margin-top:25px;
+    margin-left:250px;
+    width:100px;
+    height:100px;
+    border-radius:20px;
+    text-align:center;
+    vertical-align:middle;
+    border:none;
+    z-index:9;
+}
+.cart-input{
+    font-family:'Poppins',sans-serif;
+    border-radius:5px;
+    padding:10px;
+    border:none;
+    transition: all 0.3s ease;
+}
+.cart-input:hover{
+    transition: all 0.3s ease;
+    background-color:var(--grey);
+}
+#yes-input{
+    margin-right:10px;
+}
+#no-input[type='password']{
+    margin-left:10px;
+}
+#yes-input:hover, #no-input:hover{
+    background-color:var(--bbhover);
+}
+.box, .discount-box{
+    background:rgba(0, 0, 0,0.5);
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    position:absolute;
+    display:none;
+}
+
